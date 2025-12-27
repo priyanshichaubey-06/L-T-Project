@@ -5,8 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Hobby Website</title>
     <link rel="stylesheet" href="style.css">
-    <link href="/hobby.png" rel ="icon" size="200*200">
+    <link href="hobby.png" rel ="icon" size="200*200">
 </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .person {
+      margin: 20px;
+      width: 180px;
+    }
+    .person input {
+      display: none;
+    }
+    .person label {
+      cursor: pointer;
+      display: block;
+    }
+    .person img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #555;
+      transition: transform 0.3s;
+    }
+    .person label:hover img {
+      transform: scale(1.05);
+    }
+    .hobbies {
+      display: none;
+      margin-top: 10px;
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+    .person input:checked ~ .hobbies {
+      display: block;
+    }
+  </style>
 <body>
     <header>
     <div class="site-branding">
@@ -15,10 +61,10 @@
     </div>
     <nav>
         <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/gallery.html">Gallery</a></li>
-            <li><a href="/tips.html">Tips</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -26,33 +72,68 @@
     <main>
         <section id="about">
            
-        <h2>About My Hobby</h2>
+        <h2>About Our Hobbies</h2>
+  <div class="container">
+    <div class="person">
+      <input type="checkbox" id="kushagra">
+      <label for="kushagra">
+        <img src="" alt="Kushagra">
+      </label>
+      <div class="hobbies">
+        <h3>Kushagra's Hobbies</h3>
+        <ul>
+          <li>PC hardware enthusiast</li>
+          <li>travelling</li>
+          <li>Reading</li>
+        </ul>
+      </div>
+    </div>
 
-    <p>
-        My hobbies include sports and painting, both of which play an important
-        role in my daily life. Sports help me stay physically active, disciplined,
-        and focused, while painting allows me to express my creativity and emotions
-        through colors and designs.
-    </p>
+    <div class="person">
+      <input type="checkbox" id="prince">
+      <label for="prince">
+        <img src="" alt="Prince">
+      </label>
+      <div class="hobbies">
+        <h3>Prince's Hobbies</h3>
+        <ul>
+          <li>Photography</li>
+          <li>Cooking</li>
+          <li>Gaming</li>
+        </ul>
+      </div>
+    </div>
 
-    <p>
-        I developed an interest in sports at a young age by participating in school
-        activities and friendly matches. Painting started as a way to relax during
-        my free time and gradually became a passion as I experimented with different
-        styles and techniques.
-    </p>
+    <div class="person">
+      <input type="checkbox" id="prince2">
+      <label for="prince2">
+        <img src="" alt="Prince2">
+      </label>
+      <div class="hobbies">
+        <h3>Prince 2's Hobbies</h3>
+        <ul>
+          <li>Traveling</li>
+          <li>Yoga</li>
+          <li>Blogging</li>
+        </ul>
+      </div>
+    </div>
 
-    <p>
-        These hobbies help me maintain a healthy balance between physical fitness
-        and creative thinking, making my leisure time productive and enjoyable.
-    </p>
-
-    <h3>Tools & Skills Used</h3>
-    <ul>
-        <li>Basic sports equipment (balls, shoes, practice gear)</li>
-        <li>Painting tools like brushes, colors, and sketchbooks</li>
-        <li>Time management and regular practice</li>
-    </ul>
+    <div class="person">
+      <input type="checkbox" id="priyanshi">
+      <label for="priyanshi">
+        <img src="" alt="Priyanshi">
+      </label>
+      <div class="hobbies">
+        <h3>Priyanshi's Hobbies</h3>
+        <ul>
+          <li>rectifying</li>
+          <li>rectifying</li>
+          <li>rectifying</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
     <footer>
