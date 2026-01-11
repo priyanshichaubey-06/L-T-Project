@@ -6,6 +6,76 @@
     <title>Contact</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+.contact-section {
+    max-width: 900px;
+    margin: auto;
+}
+
+.contact-intro {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.contact-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Contact info box */
+.contact-info {
+    flex: 1;
+    padding: 20px;
+    background: #f9f9ff;
+    border-radius: 8px;
+}
+
+.contact-info h3 {
+    margin-bottom: 10px;
+    color: #7a3e5b;
+}
+
+.contact-info a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+/* Contact form */
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #7a3e5b;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+</style>
 <body>
     <header>
     <div class="site-branding">
@@ -21,11 +91,38 @@
         </ul>
     </nav>
 </header>
-     <section id="contact">
-            <h2>Contact Me</h2>
-            <p>If you want to know more, you can reach me at:</p>
-            <p><a class="button" href="mailto:yourname@example.com">Email Me</a></p>
-        </section>
-    </main>
+     <main>
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <p class="contact-intro">
+            Have any questions or want to know more about my hobbies?
+            Feel free to reach out using the form below.
+        </p>
+
+        <div class="contact-container">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
+                <p>Location: India</p>
+                <p>Response Time: Within 24–48 hours</p>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+                <button type="submit" class="button">Send Message</button>
+            </form>
+        </div>
+    </section>
+</main>
 </body>
 </html>
